@@ -1,0 +1,569 @@
+/*http://www.kammerl.de/ascii/AsciiSignature.php/*/
+/*nancyj-underlined*/
+
+
+/*
+
+ 888888ba                 dP
+ 88    `8b                88
+a88aaaa8P' .d8888b. .d888b88
+ 88   `8b. 88ooood8 88'  `88
+ 88     88 88.  ... 88.  .88
+ dP     dP `88888P' `88888P8
+ooooooooooooooooooooooooooooo
+
+ */
+
+:root {
+  /* Easy Dev Settings */
+  --btn3d-hsl-var1-0:         360;
+  --btn3d-hsl-var2-0:         100%;
+  --btn3d-hsl-var3-0:         50%;
+  --btn3d-shadow-size-var1-0: 5px;
+  --btn3d-margin-value-0:     0px;
+  --btn3d-padding-0:          10px 20px;
+  --btn3d-font-size-0:        1rem;
+  --btn3d-text-color-0:       white;
+
+  /* Algorithmic Variables */
+  --btn3d-bg-color-0:         hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   var(--btn3d-hsl-var3-0)                   /*Lightness*/
+                              );
+  --btn3d-bg-color-hover-0:   hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (9/10))  /*Lightness*/
+                              );
+  --btn3d-bg-color-active-0:  hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (8/10))  /*Lightness*/
+                              );
+  --btn3d-shadow-color-0:     hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (1/2))   /*Lightness*/
+                              );
+  --btn3d-margin-0:           calc( var(--btn3d-shadow-size-var1-0) +         /*Margin*/
+                                    var(--btn3d-margin-value-0)
+                              );
+  --btn3d-shadow-size-var2-0: calc( var(--btn3d-shadow-size-var1-0) -         /*Shadow*/
+                                  (var(--btn3d-shadow-size-var1-0) * 2)
+                              );
+  --btn3d-shadow-size-var3-0: calc(var(--btn3d-shadow-size-var2-0) * (1/2));  /*Shadow*/
+  --btn3d-shadow-size-var4-0: calc(var(--btn3d-shadow-size-var1-0) * (1/2));  /*Shadow*/
+}
+
+
+.btn-3d-0 {
+  position:   relative;
+  border:     none;
+  background: var(--btn3d-bg-color-0);
+  color:      var(--btn3d-text-color-0);
+  padding:    var(--btn3d-padding-0);
+  margin:     var(--btn3d-margin-0);
+  font-size:  var(--btn3d-font-size-0);
+  box-shadow: var(--btn3d-shadow-size-var2-0) /*H Offset*/
+              var(--btn3d-shadow-size-var1-0) /*V Offset*/
+              0                               /*Blur*/
+              0                               /*Spread*/
+              var(--btn3d-shadow-color-0);    /*Color*/
+}
+
+  .btn-3d-0:hover {
+    background: var(--btn3d-bg-color-hover-0);
+  }
+
+  .btn-3d-0:active {
+    background: var(--btn3d-bg-color-active-0);
+    top:        var(--btn3d-shadow-size-var4-0);
+    left:       var(--btn3d-shadow-size-var3-0);
+    box-shadow: var(--btn3d-shadow-size-var3-0) /*H Offset*/
+                var(--btn3d-shadow-size-var4-0) /*V Offset*/
+                0                               /*Blur*/
+                0                               /*Spread*/
+                var(--btn3d-shadow-color-0);    /*Color*/
+  }
+
+  .btn-3d-0::before {
+    position:          absolute;
+    display:           block;
+    content:           '';
+    height:            0;
+    width:             0;
+    top:               0;
+    left:              var(--btn3d-shadow-size-var2-0);
+    border:            solid                                         /*Style*/
+                       var(--btn3d-shadow-size-var1-0)               /*Width*/
+                       transparent;                                  /*Color*/
+    border-right:      solid                                         /*Style*/
+                       calc(var(--btn3d-shadow-size-var1-0) + 0.5px) /*Width*/
+                       var(--btn3d-shadow-color-0);                  /*Color*/
+    border-left-width: 0;
+  }
+
+  .btn-3d-0:active::before {
+    top:               0;
+    left:              var(--btn3d-shadow-size-var3-0);
+    border:            solid                                         /*Style*/
+                       var(--btn3d-shadow-size-var4-0)               /*Width*/
+                       transparent;                                  /*Color*/
+    border-right:      solid                                         /*Style*/
+                       calc(var(--btn3d-shadow-size-var4-0) + 0.5px) /*Width*/
+                       var(--btn3d-shadow-color-0);                  /*Color*/
+    border-left-width: 0;
+  }
+
+  .btn-3d-0::after {
+    position:            absolute;
+    display:             block;
+    content:             '';
+    height:              0;
+    width:               0;
+    bottom:              var(--btn3d-shadow-size-var2-0);
+    right:               0;
+    border:              solid                           /*Style*/
+                         var(--btn3d-shadow-size-var1-0) /*Width*/
+                         transparent;                    /*Color*/
+    border-top:          solid                           /*Style*/
+                         var(--btn3d-shadow-size-var1-0) /*Width*/
+                         var(--btn3d-shadow-color-0);    /*Color*/
+    border-bottom-width: 0;
+  }
+
+  .btn-3d-0:active::after {
+    bottom:              var(--btn3d-shadow-size-var3-0);
+    right:               0;
+    border:              solid                                         /*Style*/
+                         var(--btn3d-shadow-size-var4-0)               /*Width*/
+                         transparent;                                  /*Color*/
+    border-top:          solid                                         /*Style*/
+                         calc(var(--btn3d-shadow-size-var4-0) + 0.5px) /*Width*/
+                         var(--btn3d-shadow-color-0);                  /*Color*/
+    border-bottom-width: 0;
+  }
+
+
+/*
+
+
+dP    dP          dP dP
+Y8.  .8P          88 88
+ Y8aa8P  .d8888b. 88 88 .d8888b. dP  dP  dP
+   88    88ooood8 88 88 88'  `88 88  88  88
+   88    88.  ... 88 88 88.  .88 88.88b.88'
+   dP    `88888P' dP dP `88888P' 8888P Y8P
+oooooooooooooooooooooooooooooooooooooooooooo
+
+*/
+
+
+  :root {
+    /* Easy Dev Settings */
+    --btn3d-hsl-var1-1:         50;
+    --btn3d-hsl-var2-1:         100%;
+    --btn3d-hsl-var3-1:         50%;
+    --btn3d-shadow-size-var1-1: 5px;
+    --btn3d-margin-value-1:     0px;
+    --btn3d-padding-1:          10px 20px;
+    --btn3d-font-size-1:        1rem;
+    --btn3d-text-color-1:       white;
+
+    /* Algorithmic Variables */
+    --btn3d-bg-color-1:         hsl( var(--btn3d-hsl-var1-1),                  /*Hue*/
+                                     var(--btn3d-hsl-var2-1),                  /*Saturation*/
+                                     var(--btn3d-hsl-var3-1)                   /*Lightness*/
+                                );
+    --btn3d-bg-color-hover-1:   hsl( var(--btn3d-hsl-var1-1),                  /*Hue*/
+                                     var(--btn3d-hsl-var2-1),                  /*Saturation*/
+                                     calc((var(--btn3d-hsl-var3-1)) * (9/10))  /*Lightness*/
+                                );
+    --btn3d-bg-color-active-1:  hsl( var(--btn3d-hsl-var1-1),                  /*Hue*/
+                                     var(--btn3d-hsl-var2-1),                  /*Saturation*/
+                                     calc((var(--btn3d-hsl-var3-1)) * (8/10))  /*Lightness*/
+                                );
+    --btn3d-shadow-color-1:     hsl( var(--btn3d-hsl-var1-1),                  /*Hue*/
+                                     var(--btn3d-hsl-var2-1),                  /*Saturation*/
+                                     calc((var(--btn3d-hsl-var3-1)) * (1/2))   /*Lightness*/
+                                );
+    --btn3d-margin-1:           calc( var(--btn3d-shadow-size-var1-1) +         /*Margin*/
+                                      var(--btn3d-margin-value-1)
+                                );
+    --btn3d-shadow-size-var2-1: calc( var(--btn3d-shadow-size-var1-1) -         /*Shadow*/
+                                    (var(--btn3d-shadow-size-var1-1) * 2)
+                                );
+    --btn3d-shadow-size-var3-1: calc(var(--btn3d-shadow-size-var2-1) * (1/2));  /*Shadow*/
+    --btn3d-shadow-size-var4-1: calc(var(--btn3d-shadow-size-var1-1) * (1/2));  /*Shadow*/
+  }
+
+
+  .btn-3d-1 {
+    position:   relative;
+    border:     none;
+    background: var(--btn3d-bg-color-1);
+    color:      var(--btn3d-text-color-1);
+    padding:    var(--btn3d-padding-1);
+    margin:     var(--btn3d-margin-1);
+    font-size:  var(--btn3d-font-size-1);
+    box-shadow: var(--btn3d-shadow-size-var2-1) /*H Offset*/
+                var(--btn3d-shadow-size-var1-1) /*V Offset*/
+                0                               /*Blur*/
+                0                               /*Spread*/
+                var(--btn3d-shadow-color-1);    /*Color*/
+  }
+
+    .btn-3d-1:hover {
+      background: var(--btn3d-bg-color-hover-1);
+    }
+
+    .btn-3d-1:active {
+      background: var(--btn3d-bg-color-active-1);
+      top:        var(--btn3d-shadow-size-var4-1);
+      left:       var(--btn3d-shadow-size-var3-1);
+      box-shadow: var(--btn3d-shadow-size-var3-1) /*H Offset*/
+                  var(--btn3d-shadow-size-var4-1) /*V Offset*/
+                  0                               /*Blur*/
+                  0                               /*Spread*/
+                  var(--btn3d-shadow-color-1);    /*Color*/
+    }
+
+    .btn-3d-1::before {
+      position:          absolute;
+      display:           block;
+      content:           '';
+      height:            0;
+      width:             0;
+      top:               0;
+      left:              var(--btn3d-shadow-size-var2-1);
+      border:            solid                                         /*Style*/
+                         var(--btn3d-shadow-size-var1-1)               /*Width*/
+                         transparent;                                  /*Color*/
+      border-right:      solid                                         /*Style*/
+                         calc(var(--btn3d-shadow-size-var1-1) + 0.5px) /*Width*/
+                         var(--btn3d-shadow-color-1);                  /*Color*/
+      border-left-width: 0;
+    }
+
+    .btn-3d-1:active::before {
+      top:               0;
+      left:              var(--btn3d-shadow-size-var3-1);
+      border:            solid                                         /*Style*/
+                         var(--btn3d-shadow-size-var4-1)               /*Width*/
+                         transparent;                                  /*Color*/
+      border-right:      solid                                         /*Style*/
+                         calc(var(--btn3d-shadow-size-var4-1) + 0.5px) /*Width*/
+                         var(--btn3d-shadow-color-1);                  /*Color*/
+      border-left-width: 0;
+    }
+
+    .btn-3d-1::after {
+      position:            absolute;
+      display:             block;
+      content:             '';
+      height:              0;
+      width:               0;
+      bottom:              var(--btn3d-shadow-size-var2-1);
+      right:               0;
+      border:              solid                           /*Style*/
+                           var(--btn3d-shadow-size-var1-1) /*Width*/
+                           transparent;                    /*Color*/
+      border-top:          solid                           /*Style*/
+                           var(--btn3d-shadow-size-var1-1) /*Width*/
+                           var(--btn3d-shadow-color-1);    /*Color*/
+      border-bottom-width: 0;
+    }
+
+    .btn-3d-1:active::after {
+      bottom:              var(--btn3d-shadow-size-var3-1);
+      right:               0;
+      border:              solid                                         /*Style*/
+                           var(--btn3d-shadow-size-var4-1)               /*Width*/
+                           transparent;                                  /*Color*/
+      border-top:          solid                                         /*Style*/
+                           calc(var(--btn3d-shadow-size-var4-1) + 0.5px) /*Width*/
+                           var(--btn3d-shadow-color-1);                  /*Color*/
+      border-bottom-width: 0;
+    }
+
+
+/*
+
+.88888.
+d8'   `88
+88        88d888b. .d8888b. .d8888b. 88d888b.
+88   YP88 88'  `88 88ooood8 88ooood8 88'  `88
+Y8.   .88 88       88.  ... 88.  ... 88    88
+`88888'  dP       `88888P' `88888P' dP    dP
+oooooooooooooooooooooooooooooooooooooooooooooo
+
+*/
+
+
+    :root {
+      /* Easy Dev Settings */
+      --btn3d-hsl-var1-2:         100;
+      --btn3d-hsl-var2-2:         100%;
+      --btn3d-hsl-var3-2:         50%;
+      --btn3d-shadow-size-var1-2: 5px;
+      --btn3d-margin-value-2:     0px;
+      --btn3d-padding-2:          10px 20px;
+      --btn3d-font-size-2:        1rem;
+      --btn3d-text-color-2:       white;
+
+      /* Algorithmic Variables */
+      --btn3d-bg-color-2:         hsl( var(--btn3d-hsl-var1-2),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-2),                  /*Saturation*/
+                                       var(--btn3d-hsl-var3-2)                   /*Lightness*/
+                                  );
+      --btn3d-bg-color-hover-2:   hsl( var(--btn3d-hsl-var1-2),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-2),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-2)) * (9/10))  /*Lightness*/
+                                  );
+      --btn3d-bg-color-active-2:  hsl( var(--btn3d-hsl-var1-2),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-2),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-2)) * (8/10))  /*Lightness*/
+                                  );
+      --btn3d-shadow-color-2:     hsl( var(--btn3d-hsl-var1-2),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-2),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-2)) * (1/2))   /*Lightness*/
+                                  );
+      --btn3d-margin-2:           calc( var(--btn3d-shadow-size-var1-2) +         /*Margin*/
+                                        var(--btn3d-margin-value-2)
+                                  );
+      --btn3d-shadow-size-var2-2: calc( var(--btn3d-shadow-size-var1-2) -         /*Shadow*/
+                                      (var(--btn3d-shadow-size-var1-2) * 2)
+                                  );
+      --btn3d-shadow-size-var3-2: calc(var(--btn3d-shadow-size-var2-2) * (1/2));  /*Shadow*/
+      --btn3d-shadow-size-var4-2: calc(var(--btn3d-shadow-size-var1-2) * (1/2));  /*Shadow*/
+    }
+
+
+    .btn-3d-2 {
+      position:   relative;
+      border:     none;
+      background: var(--btn3d-bg-color-2);
+      color:      var(--btn3d-text-color-2);
+      padding:    var(--btn3d-padding-2);
+      margin:     var(--btn3d-margin-2);
+      font-size:  var(--btn3d-font-size-2);
+      box-shadow: var(--btn3d-shadow-size-var2-2) /*H Offset*/
+                  var(--btn3d-shadow-size-var1-2) /*V Offset*/
+                  0                               /*Blur*/
+                  0                               /*Spread*/
+                  var(--btn3d-shadow-color-2);    /*Color*/
+    }
+
+      .btn-3d-2:hover {
+        background: var(--btn3d-bg-color-hover-2);
+      }
+
+      .btn-3d-2:active {
+        background: var(--btn3d-bg-color-active-2);
+        top:        var(--btn3d-shadow-size-var4-2);
+        left:       var(--btn3d-shadow-size-var3-2);
+        box-shadow: var(--btn3d-shadow-size-var3-2) /*H Offset*/
+                    var(--btn3d-shadow-size-var4-2) /*V Offset*/
+                    0                               /*Blur*/
+                    0                               /*Spread*/
+                    var(--btn3d-shadow-color-2);    /*Color*/
+      }
+
+      .btn-3d-2::before {
+        position:          absolute;
+        display:           block;
+        content:           '';
+        height:            0;
+        width:             0;
+        top:               0;
+        left:              var(--btn3d-shadow-size-var2-2);
+        border:            solid                                         /*Style*/
+                           var(--btn3d-shadow-size-var1-2)               /*Width*/
+                           transparent;                                  /*Color*/
+        border-right:      solid                                         /*Style*/
+                           calc(var(--btn3d-shadow-size-var1-2) + 0.5px) /*Width*/
+                           var(--btn3d-shadow-color-2);                  /*Color*/
+        border-left-width: 0;
+      }
+
+      .btn-3d-2:active::before {
+        top:               0;
+        left:              var(--btn3d-shadow-size-var3-2);
+        border:            solid                                         /*Style*/
+                           var(--btn3d-shadow-size-var4-2)               /*Width*/
+                           transparent;                                  /*Color*/
+        border-right:      solid                                         /*Style*/
+                           calc(var(--btn3d-shadow-size-var4-2) + 0.5px) /*Width*/
+                           var(--btn3d-shadow-color-2);                  /*Color*/
+        border-left-width: 0;
+      }
+
+      .btn-3d-2::after {
+        position:            absolute;
+        display:             block;
+        content:             '';
+        height:              0;
+        width:               0;
+        bottom:              var(--btn3d-shadow-size-var2-2);
+        right:               0;
+        border:              solid                           /*Style*/
+                             var(--btn3d-shadow-size-var1-2) /*Width*/
+                             transparent;                    /*Color*/
+        border-top:          solid                           /*Style*/
+                             var(--btn3d-shadow-size-var1-2) /*Width*/
+                             var(--btn3d-shadow-color-2);    /*Color*/
+        border-bottom-width: 0;
+      }
+
+      .btn-3d-2:active::after {
+        bottom:              var(--btn3d-shadow-size-var3-2);
+        right:               0;
+        border:              solid                                         /*Style*/
+                             var(--btn3d-shadow-size-var4-2)               /*Width*/
+                             transparent;                                  /*Color*/
+        border-top:          solid                                         /*Style*/
+                             calc(var(--btn3d-shadow-size-var4-2) + 0.5px) /*Width*/
+                             var(--btn3d-shadow-color-2);                  /*Color*/
+        border-bottom-width: 0;
+      }
+
+/*
+
+888888ba  dP
+88    `8b 88
+a88aaaa8P' 88 dP    dP .d8888b.
+88   `8b. 88 88    88 88ooood8
+88    .88 88 88.  .88 88.  ...
+88888888P dP `88888P' `88888P'
+oooooooooooooooooooooooooooooooo
+
+
+*/
+
+    :root {
+      /* Easy Dev Settings */
+      --btn3d-hsl-var1-3:         200;
+      --btn3d-hsl-var2-3:         100%;
+      --btn3d-hsl-var3-3:         50%;
+      --btn3d-shadow-size-var1-3: 5px;
+      --btn3d-margin-value-3:     0px;
+      --btn3d-padding-3:          10px 20px;
+      --btn3d-font-size-3:        1rem;
+      --btn3d-text-color-3:       white;
+
+      /* Algorithmic Variables */
+      --btn3d-bg-color-3:         hsl( var(--btn3d-hsl-var1-3),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-3),                  /*Saturation*/
+                                       var(--btn3d-hsl-var3-3)                   /*Lightness*/
+                                  );
+      --btn3d-bg-color-hover-3:   hsl( var(--btn3d-hsl-var1-3),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-3),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-3)) * (9/10))  /*Lightness*/
+                                  );
+      --btn3d-bg-color-active-3:  hsl( var(--btn3d-hsl-var1-3),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-3),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-3)) * (8/10))  /*Lightness*/
+                                  );
+      --btn3d-shadow-color-3:     hsl( var(--btn3d-hsl-var1-3),                  /*Hue*/
+                                       var(--btn3d-hsl-var2-3),                  /*Saturation*/
+                                       calc((var(--btn3d-hsl-var3-3)) * (1/2))   /*Lightness*/
+                                  );
+      --btn3d-margin-3:           calc( var(--btn3d-shadow-size-var1-3) +         /*Margin*/
+                                        var(--btn3d-margin-value-3)
+                                  );
+      --btn3d-shadow-size-var2-3: calc( var(--btn3d-shadow-size-var1-3) -         /*Shadow*/
+                                      (var(--btn3d-shadow-size-var1-3) * 2)
+                                  );
+      --btn3d-shadow-size-var3-3: calc(var(--btn3d-shadow-size-var2-3) * (1/2));  /*Shadow*/
+      --btn3d-shadow-size-var4-3: calc(var(--btn3d-shadow-size-var1-3) * (1/2));  /*Shadow*/
+    }
+
+
+    .btn-3d-3 {
+      position:   relative;
+      border:     none;
+      background: var(--btn3d-bg-color-3);
+      color:      var(--btn3d-text-color-3);
+      padding:    var(--btn3d-padding-3);
+      margin:     var(--btn3d-margin-3);
+      font-size:  var(--btn3d-font-size-3);
+      box-shadow: var(--btn3d-shadow-size-var2-3) /*H Offset*/
+                  var(--btn3d-shadow-size-var1-3) /*V Offset*/
+                  0                               /*Blur*/
+                  0                               /*Spread*/
+                  var(--btn3d-shadow-color-3);    /*Color*/
+    }
+
+      .btn-3d-3:hover {
+        background: var(--btn3d-bg-color-hover-3);
+      }
+
+      .btn-3d-3:active {
+        background: var(--btn3d-bg-color-active-3);
+        top:        var(--btn3d-shadow-size-var4-3);
+        left:       var(--btn3d-shadow-size-var3-3);
+        box-shadow: var(--btn3d-shadow-size-var3-3) /*H Offset*/
+                    var(--btn3d-shadow-size-var4-3) /*V Offset*/
+                    0                               /*Blur*/
+                    0                               /*Spread*/
+                    var(--btn3d-shadow-color-3);    /*Color*/
+      }
+
+      .btn-3d-3::before {
+        position:          absolute;
+        display:           block;
+        content:           '';
+        height:            0;
+        width:             0;
+        top:               0;
+        left:              var(--btn3d-shadow-size-var2-3);
+        border:            solid                                         /*Style*/
+                           var(--btn3d-shadow-size-var1-3)               /*Width*/
+                           transparent;                                  /*Color*/
+        border-right:      solid                                         /*Style*/
+                           calc(var(--btn3d-shadow-size-var1-3) + 0.5px) /*Width*/
+                           var(--btn3d-shadow-color-3);                  /*Color*/
+        border-left-width: 0;
+      }
+
+      .btn-3d-3:active::before {
+        top:               0;
+        left:              var(--btn3d-shadow-size-var3-3);
+        border:            solid                                         /*Style*/
+                           var(--btn3d-shadow-size-var4-3)               /*Width*/
+                           transparent;                                  /*Color*/
+        border-right:      solid                                         /*Style*/
+                           calc(var(--btn3d-shadow-size-var4-3) + 0.5px) /*Width*/
+                           var(--btn3d-shadow-color-3);                  /*Color*/
+        border-left-width: 0;
+      }
+
+      .btn-3d-3::after {
+        position:            absolute;
+        display:             block;
+        content:             '';
+        height:              0;
+        width:               0;
+        bottom:              var(--btn3d-shadow-size-var2-3);
+        right:               0;
+        border:              solid                           /*Style*/
+                             var(--btn3d-shadow-size-var1-3) /*Width*/
+                             transparent;                    /*Color*/
+        border-top:          solid                           /*Style*/
+                             var(--btn3d-shadow-size-var1-3) /*Width*/
+                             var(--btn3d-shadow-color-3);    /*Color*/
+        border-bottom-width: 0;
+      }
+
+      .btn-3d-3:active::after {
+        bottom:              var(--btn3d-shadow-size-var3-3);
+        right:               0;
+        border:              solid                                         /*Style*/
+                             var(--btn3d-shadow-size-var4-3)               /*Width*/
+                             transparent;                                  /*Color*/
+        border-top:          solid                                         /*Style*/
+                             calc(var(--btn3d-shadow-size-var4-3) + 0.5px) /*Width*/
+                             var(--btn3d-shadow-color-3);                  /*Color*/
+        border-bottom-width: 0;
+      }
+
+button::-moz-focus-inner {
+   border: 0;
+}

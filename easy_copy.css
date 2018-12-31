@@ -1,0 +1,135 @@
+/*
+Find and replace "-0" to make multiple types of buttons
+Adjust the button properties found under "Easy Dev Settings"
+*/
+
+:root {
+  /* Easy Dev Settings */
+  --btn3d-hsl-var1-0:         360;
+  --btn3d-hsl-var2-0:         100%;
+  --btn3d-hsl-var3-0:         50%;
+  --btn3d-shadow-size-var1-0: 5px;
+  --btn3d-margin-value-0:     0px;
+  --btn3d-padding-0:          10px 20px;
+  --btn3d-font-size-0:        1rem;
+  --btn3d-text-color-0:       white;
+
+  /* Algorithmic Variables */
+  --btn3d-bg-color-0:         hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   var(--btn3d-hsl-var3-0)                   /*Lightness*/
+                              );
+  --btn3d-bg-color-hover-0:   hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (9/10))  /*Lightness*/
+                              );
+  --btn3d-bg-color-active-0:  hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (8/10))  /*Lightness*/
+                              );
+  --btn3d-shadow-color-0:     hsl( var(--btn3d-hsl-var1-0),                  /*Hue*/
+                                   var(--btn3d-hsl-var2-0),                  /*Saturation*/
+                                   calc((var(--btn3d-hsl-var3-0)) * (1/2))   /*Lightness*/
+                              );
+  --btn3d-margin-0:           calc( var(--btn3d-shadow-size-var1-0) +         /*Margin*/
+                                    var(--btn3d-margin-value-0)
+                              );
+  --btn3d-shadow-size-var2-0: calc( var(--btn3d-shadow-size-var1-0) -         /*Shadow*/
+                                  (var(--btn3d-shadow-size-var1-0) * 2)
+                              );
+  --btn3d-shadow-size-var3-0: calc(var(--btn3d-shadow-size-var2-0) * (1/2));  /*Shadow*/
+  --btn3d-shadow-size-var4-0: calc(var(--btn3d-shadow-size-var1-0) * (1/2));  /*Shadow*/
+}
+
+
+.btn-3d-0 {
+  position:   relative;
+  border:     none;
+  background: var(--btn3d-bg-color-0);
+  color:      var(--btn3d-text-color-0);
+  padding:    var(--btn3d-padding-0);
+  margin:     var(--btn3d-margin-0);
+  font-size:  var(--btn3d-font-size-0);
+  box-shadow: var(--btn3d-shadow-size-var2-0) /*H Offset*/
+              var(--btn3d-shadow-size-var1-0) /*V Offset*/
+              0                               /*Blur*/
+              0                               /*Spread*/
+              var(--btn3d-shadow-color-0);    /*Color*/
+}
+
+  .btn-3d-0:hover {
+    background: var(--btn3d-bg-color-hover-0);
+  }
+
+  .btn-3d-0:active {
+    background: var(--btn3d-bg-color-active-0);
+    top:        var(--btn3d-shadow-size-var4-0);
+    left:       var(--btn3d-shadow-size-var3-0);
+    box-shadow: var(--btn3d-shadow-size-var3-0) /*H Offset*/
+                var(--btn3d-shadow-size-var4-0) /*V Offset*/
+                0                               /*Blur*/
+                0                               /*Spread*/
+                var(--btn3d-shadow-color-0);    /*Color*/
+  }
+
+  .btn-3d-0::before {
+    position:          absolute;
+    display:           block;
+    content:           '';
+    height:            0;
+    width:             0;
+    top:               0;
+    left:              var(--btn3d-shadow-size-var2-0);
+    border:            solid                                         /*Style*/
+                       var(--btn3d-shadow-size-var1-0)               /*Width*/
+                       transparent;                                  /*Color*/
+    border-right:      solid                                         /*Style*/
+                       calc(var(--btn3d-shadow-size-var1-0) + 0.5px) /*Width*/
+                       var(--btn3d-shadow-color-0);                  /*Color*/
+    border-left-width: 0;
+  }
+
+  .btn-3d-0:active::before {
+    top:               0;
+    left:              var(--btn3d-shadow-size-var3-0);
+    border:            solid                                         /*Style*/
+                       var(--btn3d-shadow-size-var4-0)               /*Width*/
+                       transparent;                                  /*Color*/
+    border-right:      solid                                         /*Style*/
+                       calc(var(--btn3d-shadow-size-var4-0) + 0.5px) /*Width*/
+                       var(--btn3d-shadow-color-0);                  /*Color*/
+    border-left-width: 0;
+  }
+
+  .btn-3d-0::after {
+    position:            absolute;
+    display:             block;
+    content:             '';
+    height:              0;
+    width:               0;
+    bottom:              var(--btn3d-shadow-size-var2-0);
+    right:               0;
+    border:              solid                           /*Style*/
+                         var(--btn3d-shadow-size-var1-0) /*Width*/
+                         transparent;                    /*Color*/
+    border-top:          solid                           /*Style*/
+                         var(--btn3d-shadow-size-var1-0) /*Width*/
+                         var(--btn3d-shadow-color-0);    /*Color*/
+    border-bottom-width: 0;
+  }
+
+  .btn-3d-0:active::after {
+    bottom:              var(--btn3d-shadow-size-var3-0);
+    right:               0;
+    border:              solid                                         /*Style*/
+                         var(--btn3d-shadow-size-var4-0)               /*Width*/
+                         transparent;                                  /*Color*/
+    border-top:          solid                                         /*Style*/
+                         calc(var(--btn3d-shadow-size-var4-0) + 0.5px) /*Width*/
+                         var(--btn3d-shadow-color-0);                  /*Color*/
+    border-bottom-width: 0;
+  }
+
+button::-moz-focus-inner {
+   border: 0;
+}
